@@ -1,0 +1,736 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22EBCB4121350654704FC833 /* Pods_MTAppRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7E1ECAB30F40A01BD05D81 /* Pods_MTAppRTC.framework */; };
+		8075C24C1E892E310004CCE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075C24B1E892E310004CCE2 /* main.m */; };
+		808A6FCA1E89463A0023A265 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808A6FC91E89463A0023A265 /* AVFoundation.framework */; };
+		80B004701E8D233400C180B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0046F1E8D233400C180B6 /* AppDelegate.m */; };
+		80B004811E8D233D00C180B6 /* MTRTCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B004761E8D233C00C180B6 /* MTRTCClient.m */; };
+		80B004821E8D233D00C180B6 /* MTRTCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B004781E8D233C00C180B6 /* MTRTCHelper.m */; };
+		80B004831E8D233D00C180B6 /* MTRTCRegisterResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0047A1E8D233C00C180B6 /* MTRTCRegisterResponse.m */; };
+		80B004841E8D233D00C180B6 /* MTRTCSignalingMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0047C1E8D233D00C180B6 /* MTRTCSignalingMessage.m */; };
+		80B004851E8D233D00C180B6 /* MTRTCWebSocketChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0047E1E8D233D00C180B6 /* MTRTCWebSocketChannel.m */; };
+		80B0048A1E8D235800C180B6 /* MTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B004871E8D235800C180B6 /* MTMainViewController.m */; };
+		80B0048B1E8D235800C180B6 /* MTRTCCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B004891E8D235800C180B6 /* MTRTCCallViewController.m */; };
+		80B004911E8D237500C180B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B0048D1E8D237500C180B6 /* LaunchScreen.storyboard */; };
+		80B004921E8D237500C180B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B0048F1E8D237500C180B6 /* Main.storyboard */; };
+		80B004951E8D4E9400C180B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B004941E8D4E9400C180B6 /* Assets.xcassets */; };
+		EC7383D81E8D6B1A000AA33A /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7383D61E8D6B00000AA33A /* WebRTC.framework */; };
+		EC7383D91E8D6B1A000AA33A /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC7383D61E8D6B00000AA33A /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8075C2641E892E360004CCE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8075C23F1E892E300004CCE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8075C2461E892E300004CCE2;
+			remoteInfo = MTAppRTC;
+		};
+		8075C26F1E892E360004CCE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8075C23F1E892E300004CCE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8075C2461E892E300004CCE2;
+			remoteInfo = MTAppRTC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		801564951E8A8ECE003ECC21 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EC7383D91E8D6B1A000AA33A /* WebRTC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1DB150D94EEFF9E79C9FCED6 /* Pods-MTAppRTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTAppRTC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTAppRTC/Pods-MTAppRTC.debug.xcconfig"; sourceTree = "<group>"; };
+		7D911A6A983DD496931D6126 /* Pods-MTAppRTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTAppRTC.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTAppRTC/Pods-MTAppRTC.release.xcconfig"; sourceTree = "<group>"; };
+		8075C2471E892E300004CCE2 /* MTAppRTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTAppRTC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8075C24B1E892E310004CCE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8075C25E1E892E360004CCE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8075C2631E892E360004CCE2 /* MTAppRTCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTAppRTCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8075C26E1E892E360004CCE2 /* MTAppRTCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTAppRTCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		808A6FC91E89463A0023A265 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		80B0046E1E8D233400C180B6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		80B0046F1E8D233400C180B6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		80B004751E8D233C00C180B6 /* MTRTCClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRTCClient.h; sourceTree = "<group>"; };
+		80B004761E8D233C00C180B6 /* MTRTCClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRTCClient.m; sourceTree = "<group>"; };
+		80B004771E8D233C00C180B6 /* MTRTCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRTCHelper.h; sourceTree = "<group>"; };
+		80B004781E8D233C00C180B6 /* MTRTCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRTCHelper.m; sourceTree = "<group>"; };
+		80B004791E8D233C00C180B6 /* MTRTCRegisterResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRTCRegisterResponse.h; sourceTree = "<group>"; };
+		80B0047A1E8D233C00C180B6 /* MTRTCRegisterResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRTCRegisterResponse.m; sourceTree = "<group>"; };
+		80B0047B1E8D233D00C180B6 /* MTRTCSignalingMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRTCSignalingMessage.h; sourceTree = "<group>"; };
+		80B0047C1E8D233D00C180B6 /* MTRTCSignalingMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRTCSignalingMessage.m; sourceTree = "<group>"; };
+		80B0047D1E8D233D00C180B6 /* MTRTCWebSocketChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRTCWebSocketChannel.h; sourceTree = "<group>"; };
+		80B0047E1E8D233D00C180B6 /* MTRTCWebSocketChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRTCWebSocketChannel.m; sourceTree = "<group>"; };
+		80B004861E8D235800C180B6 /* MTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMainViewController.h; sourceTree = "<group>"; };
+		80B004871E8D235800C180B6 /* MTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMainViewController.m; sourceTree = "<group>"; };
+		80B004881E8D235800C180B6 /* MTRTCCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRTCCallViewController.h; sourceTree = "<group>"; };
+		80B004891E8D235800C180B6 /* MTRTCCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRTCCallViewController.m; sourceTree = "<group>"; };
+		80B0048E1E8D237500C180B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		80B004901E8D237500C180B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80B004941E8D4E9400C180B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C7E1ECAB30F40A01BD05D81 /* Pods_MTAppRTC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTAppRTC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC7383D61E8D6B00000AA33A /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebRTC.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8075C2441E892E300004CCE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				808A6FCA1E89463A0023A265 /* AVFoundation.framework in Frameworks */,
+				22EBCB4121350654704FC833 /* Pods_MTAppRTC.framework in Frameworks */,
+				EC7383D81E8D6B1A000AA33A /* WebRTC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8075C2601E892E360004CCE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8075C26B1E892E360004CCE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8075C23E1E892E300004CCE2 = {
+			isa = PBXGroup;
+			children = (
+				8075C2491E892E310004CCE2 /* MTAppRTC */,
+				8075C2481E892E310004CCE2 /* Products */,
+				808A6FC81E89463A0023A265 /* Frameworks */,
+				D9B55E9802C0B4C4E8F9ED41 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		8075C2481E892E310004CCE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8075C2471E892E300004CCE2 /* MTAppRTC.app */,
+				8075C2631E892E360004CCE2 /* MTAppRTCTests.xctest */,
+				8075C26E1E892E360004CCE2 /* MTAppRTCUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8075C2491E892E310004CCE2 /* MTAppRTC */ = {
+			isa = PBXGroup;
+			children = (
+				EC7383D51E8D6ADB000AA33A /* WebRTC-Framework */,
+				80B004931E8D4E9400C180B6 /* Assets */,
+				80B0048C1E8D237500C180B6 /* Storyboard */,
+				80B0046A1E8D228B00C180B6 /* App Delegate */,
+				80B0046B1E8D228B00C180B6 /* Shared */,
+				80B0046D1E8D228B00C180B6 /* View Controllers */,
+				8075C25E1E892E360004CCE2 /* Info.plist */,
+				8075C24A1E892E310004CCE2 /* Supporting Files */,
+			);
+			path = MTAppRTC;
+			sourceTree = "<group>";
+		};
+		8075C24A1E892E310004CCE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8075C24B1E892E310004CCE2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		808A6FC81E89463A0023A265 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				808A6FC91E89463A0023A265 /* AVFoundation.framework */,
+				8C7E1ECAB30F40A01BD05D81 /* Pods_MTAppRTC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80B0046A1E8D228B00C180B6 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				80B0046E1E8D233400C180B6 /* AppDelegate.h */,
+				80B0046F1E8D233400C180B6 /* AppDelegate.m */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		80B0046B1E8D228B00C180B6 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				80B004751E8D233C00C180B6 /* MTRTCClient.h */,
+				80B004761E8D233C00C180B6 /* MTRTCClient.m */,
+				80B004771E8D233C00C180B6 /* MTRTCHelper.h */,
+				80B004781E8D233C00C180B6 /* MTRTCHelper.m */,
+				80B004791E8D233C00C180B6 /* MTRTCRegisterResponse.h */,
+				80B0047A1E8D233C00C180B6 /* MTRTCRegisterResponse.m */,
+				80B0047B1E8D233D00C180B6 /* MTRTCSignalingMessage.h */,
+				80B0047C1E8D233D00C180B6 /* MTRTCSignalingMessage.m */,
+				80B0047D1E8D233D00C180B6 /* MTRTCWebSocketChannel.h */,
+				80B0047E1E8D233D00C180B6 /* MTRTCWebSocketChannel.m */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		80B0046D1E8D228B00C180B6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				80B004861E8D235800C180B6 /* MTMainViewController.h */,
+				80B004871E8D235800C180B6 /* MTMainViewController.m */,
+				80B004881E8D235800C180B6 /* MTRTCCallViewController.h */,
+				80B004891E8D235800C180B6 /* MTRTCCallViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		80B0048C1E8D237500C180B6 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				80B0048D1E8D237500C180B6 /* LaunchScreen.storyboard */,
+				80B0048F1E8D237500C180B6 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		80B004931E8D4E9400C180B6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				80B004941E8D4E9400C180B6 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D9B55E9802C0B4C4E8F9ED41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DB150D94EEFF9E79C9FCED6 /* Pods-MTAppRTC.debug.xcconfig */,
+				7D911A6A983DD496931D6126 /* Pods-MTAppRTC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC7383D51E8D6ADB000AA33A /* WebRTC-Framework */ = {
+			isa = PBXGroup;
+			children = (
+				EC7383D61E8D6B00000AA33A /* WebRTC.framework */,
+			);
+			path = "WebRTC-Framework";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8075C2461E892E300004CCE2 /* MTAppRTC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8075C2771E892E370004CCE2 /* Build configuration list for PBXNativeTarget "MTAppRTC" */;
+			buildPhases = (
+				3B53BDCEBA74BA72D48C7671 /* [CP] Check Pods Manifest.lock */,
+				8075C2431E892E300004CCE2 /* Sources */,
+				8075C2441E892E300004CCE2 /* Frameworks */,
+				8075C2451E892E300004CCE2 /* Resources */,
+				801564951E8A8ECE003ECC21 /* Embed Frameworks */,
+				D6FE6B2AB547516D5813F5C8 /* [CP] Embed Pods Frameworks */,
+				77A1D41344C9E68747229190 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MTAppRTC;
+			productName = MTAppRTC;
+			productReference = 8075C2471E892E300004CCE2 /* MTAppRTC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8075C2621E892E360004CCE2 /* MTAppRTCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8075C27A1E892E370004CCE2 /* Build configuration list for PBXNativeTarget "MTAppRTCTests" */;
+			buildPhases = (
+				8075C25F1E892E360004CCE2 /* Sources */,
+				8075C2601E892E360004CCE2 /* Frameworks */,
+				8075C2611E892E360004CCE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8075C2651E892E360004CCE2 /* PBXTargetDependency */,
+			);
+			name = MTAppRTCTests;
+			productName = MTAppRTCTests;
+			productReference = 8075C2631E892E360004CCE2 /* MTAppRTCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8075C26D1E892E360004CCE2 /* MTAppRTCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8075C27D1E892E370004CCE2 /* Build configuration list for PBXNativeTarget "MTAppRTCUITests" */;
+			buildPhases = (
+				8075C26A1E892E360004CCE2 /* Sources */,
+				8075C26B1E892E360004CCE2 /* Frameworks */,
+				8075C26C1E892E360004CCE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8075C2701E892E360004CCE2 /* PBXTargetDependency */,
+			);
+			name = MTAppRTCUITests;
+			productName = MTAppRTCUITests;
+			productReference = 8075C26E1E892E360004CCE2 /* MTAppRTCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8075C23F1E892E300004CCE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Yogesh Murugesh";
+				TargetAttributes = {
+					8075C2461E892E300004CCE2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3RHR7K3FP7;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+						};
+					};
+					8075C2621E892E360004CCE2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8075C2461E892E300004CCE2;
+					};
+					8075C26D1E892E360004CCE2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8075C2461E892E300004CCE2;
+					};
+				};
+			};
+			buildConfigurationList = 8075C2421E892E300004CCE2 /* Build configuration list for PBXProject "MTAppRTC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8075C23E1E892E300004CCE2;
+			productRefGroup = 8075C2481E892E310004CCE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8075C2461E892E300004CCE2 /* MTAppRTC */,
+				8075C2621E892E360004CCE2 /* MTAppRTCTests */,
+				8075C26D1E892E360004CCE2 /* MTAppRTCUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8075C2451E892E300004CCE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B004911E8D237500C180B6 /* LaunchScreen.storyboard in Resources */,
+				80B004951E8D4E9400C180B6 /* Assets.xcassets in Resources */,
+				80B004921E8D237500C180B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8075C2611E892E360004CCE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8075C26C1E892E360004CCE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B53BDCEBA74BA72D48C7671 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		77A1D41344C9E68747229190 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTAppRTC/Pods-MTAppRTC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6FE6B2AB547516D5813F5C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTAppRTC/Pods-MTAppRTC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8075C2431E892E300004CCE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B0048A1E8D235800C180B6 /* MTMainViewController.m in Sources */,
+				80B004831E8D233D00C180B6 /* MTRTCRegisterResponse.m in Sources */,
+				80B004821E8D233D00C180B6 /* MTRTCHelper.m in Sources */,
+				80B004841E8D233D00C180B6 /* MTRTCSignalingMessage.m in Sources */,
+				8075C24C1E892E310004CCE2 /* main.m in Sources */,
+				80B004811E8D233D00C180B6 /* MTRTCClient.m in Sources */,
+				80B0048B1E8D235800C180B6 /* MTRTCCallViewController.m in Sources */,
+				80B004851E8D233D00C180B6 /* MTRTCWebSocketChannel.m in Sources */,
+				80B004701E8D233400C180B6 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8075C25F1E892E360004CCE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8075C26A1E892E360004CCE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8075C2651E892E360004CCE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8075C2461E892E300004CCE2 /* MTAppRTC */;
+			targetProxy = 8075C2641E892E360004CCE2 /* PBXContainerItemProxy */;
+		};
+		8075C2701E892E360004CCE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8075C2461E892E300004CCE2 /* MTAppRTC */;
+			targetProxy = 8075C26F1E892E360004CCE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		80B0048D1E8D237500C180B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80B0048E1E8D237500C180B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		80B0048F1E8D237500C180B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80B004901E8D237500C180B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8075C2751E892E370004CCE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8075C2761E892E370004CCE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8075C2781E892E370004CCE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DB150D94EEFF9E79C9FCED6 /* Pods-MTAppRTC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3RHR7K3FP7;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MTAppRTC/Frameworks",
+					"$(PROJECT_DIR)/MTAppRTC/WebRTC-Framework",
+				);
+				INFOPLIST_FILE = MTAppRTC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MTAppRTC/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mallowtech.MTAppRTC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ec7fda33-8b64-4aae-8016-04c0bc82e3be";
+				PROVISIONING_PROFILE_SPECIFIER = MTAppRTC_Development_Profile;
+				VALID_ARCHS = arm64;
+			};
+			name = Debug;
+		};
+		8075C2791E892E370004CCE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D911A6A983DD496931D6126 /* Pods-MTAppRTC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 3RHR7K3FP7;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MTAppRTC/Frameworks",
+					"$(PROJECT_DIR)/MTAppRTC/WebRTC-Framework",
+				);
+				INFOPLIST_FILE = MTAppRTC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MTAppRTC/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mallowtech.MTAppRTC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "87a11163-8b1d-43d5-bb2f-69bd03dcb9f4";
+				PROVISIONING_PROFILE_SPECIFIER = MTAppRTC_Adhoc_Profile;
+				VALID_ARCHS = arm64;
+			};
+			name = Release;
+		};
+		8075C27B1E892E370004CCE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MTAppRTCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mallowtech.MTAppRTCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTAppRTC.app/MTAppRTC";
+			};
+			name = Debug;
+		};
+		8075C27C1E892E370004CCE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MTAppRTCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mallowtech.MTAppRTCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTAppRTC.app/MTAppRTC";
+			};
+			name = Release;
+		};
+		8075C27E1E892E370004CCE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MTAppRTCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mallowtech.MTAppRTCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MTAppRTC;
+			};
+			name = Debug;
+		};
+		8075C27F1E892E370004CCE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MTAppRTCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mallowtech.MTAppRTCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MTAppRTC;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8075C2421E892E300004CCE2 /* Build configuration list for PBXProject "MTAppRTC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8075C2751E892E370004CCE2 /* Debug */,
+				8075C2761E892E370004CCE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8075C2771E892E370004CCE2 /* Build configuration list for PBXNativeTarget "MTAppRTC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8075C2781E892E370004CCE2 /* Debug */,
+				8075C2791E892E370004CCE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8075C27A1E892E370004CCE2 /* Build configuration list for PBXNativeTarget "MTAppRTCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8075C27B1E892E370004CCE2 /* Debug */,
+				8075C27C1E892E370004CCE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8075C27D1E892E370004CCE2 /* Build configuration list for PBXNativeTarget "MTAppRTCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8075C27E1E892E370004CCE2 /* Debug */,
+				8075C27F1E892E370004CCE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8075C23F1E892E300004CCE2 /* Project object */;
+}
