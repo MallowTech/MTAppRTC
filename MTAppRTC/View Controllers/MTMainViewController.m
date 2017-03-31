@@ -31,14 +31,15 @@
 
 - (IBAction)startCallButtonPressed:(id)sender {
     [self.view endEditing:YES];
+    UIViewController *controller = [UIApplication sharedApplication].keyWindow.rootViewController
     if (self.roomNumberTextField.text.length < 5) {
-        [MTRTCHelper showAlertWithTitle:@"OOPS!!" andMessage:@"Enter your room id with above 5 digits" inController:self];
+        [MTRTCHelper showAlertWithTitle:@"OOPS!!" andMessage:@"Enter your room id with above 5 digits" inController:controller];
         return;
     } else if (![MTRTCHelper isVideoDisabled]) {
-        [MTRTCHelper showAlertWithTitle:@"OOPS!!" andMessage:@"Give permssion for accessing video" inController:self];
+        [MTRTCHelper showAlertWithTitle:@"OOPS!!" andMessage:@"Give permssion for accessing video" inController:controller];
         return;
     } else if (![MTRTCHelper isAudioDisabled]) {
-        [MTRTCHelper showAlertWithTitle:@"OOPS!!" andMessage:@"Give permssion for accessing audio" inController:self];
+        [MTRTCHelper showAlertWithTitle:@"OOPS!!" andMessage:@"Give permssion for accessing audio" inController:controller];
         return;
     }
     [self performSegueWithIdentifier:@"MTRTCViewControllerSegue" sender:sender];

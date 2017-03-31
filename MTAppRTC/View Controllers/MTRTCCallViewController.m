@@ -126,7 +126,7 @@
 #pragma mark - ARDAppClientDelegate
 
 - (void)appClient:(MTRTCClient *)client didError:(NSError *)error {
-    [MTRTCHelper showAlertWithTitle:@"Error" andMessage:@"Something went wrong. Please try again" inController:self];
+    [MTRTCHelper showAlertWithTitle:@"OOPS!!" andMessage:@"Something went wrong. Please try again" inController:[UIApplication sharedApplication].keyWindow.rootViewController];
     [self disconnect];
 }
 
@@ -136,7 +136,7 @@
         [self.remoteVideoView renderFrame:nil];
     }
     [self.navigationController popViewControllerAnimated:YES];
-    [MTRTCHelper showAlertWithTitle:@"Error" andMessage:@"Connection disconnected. Please try with another room id" inController:self];
+    [MTRTCHelper showAlertWithTitle:@"OOPS!!" andMessage:@"Connection disconnected. Please try with another room id" inController:[UIApplication sharedApplication].keyWindow.rootViewController];
 }
 
 
