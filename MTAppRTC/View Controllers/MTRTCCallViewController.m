@@ -115,7 +115,7 @@
 
 - (IBAction)shareButtonPressed:(id)sender {
     NSMutableArray *activityItems = [NSMutableArray new];
-    [activityItems addObject:self.roomName];
+    [activityItems addObject:[NSString stringWithFormat:@"Please use the below link to join the chat:\nhttps://appr.tc/r/app14/%@", self.roomName]];
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems.mutableCopy applicationActivities:nil];
     activityViewController.popoverPresentationController.sourceView = self.view;
     activityViewController.modalPresentationStyle = UIModalPresentationPopover;
