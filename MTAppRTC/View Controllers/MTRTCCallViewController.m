@@ -52,7 +52,6 @@
 #pragma mark - Custom Methods
 
 -(void)customizeUI {
-    self.title = self.roomName;
     self.isAudioOn = YES;
     self.isVideoOn = YES;
     self.audioButton.layer.cornerRadius = self.audioButton.frame.size.height / 2;
@@ -61,6 +60,11 @@
 }
 
 -(void)initializeClientWithIceServers {
+    NSString *key = self.callDetails.allKeys.firstObject;
+    NSDictionary *dictionary = [self.callDetails objectForKey:key];
+    self.roomName = [dictionary objectForKey:@"roomId"];
+
+    self.title = self.roomName;
     RTCIceServer *iceServer = [[RTCIceServer alloc] initWithURLStrings:@[kServerURL]];
     self.client = [[MTRTCClient alloc] initWithIceServers:[NSMutableArray arrayWithObject:iceServer] andVideoCall:YES];
     
@@ -110,7 +114,7 @@
 
 - (IBAction)endButtonPressed:(id)sender {
     [self disconnect];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)shareButtonPressed:(id)sender {
@@ -126,7 +130,7 @@
 #pragma mark - ARDAppClientDelegate
 
 - (void)appClient:(MTRTCClient *)client didError:(NSError *)error {
-    [MTRTCHelper showAlertWithTitle:@"OOPS!!" andMessage:@"Something went wrong. Please try again" inController:[UIApplication sharedApplication].keyWindow.rootViewController];
+    [MTRTCHelper showAlertWithTitle:@"OOPS!!" andMessage:@"Something went wrong. Please try again" inController:self];
     [self disconnect];
 }
 
@@ -135,8 +139,8 @@
         [self.localVideoView renderFrame:nil];
         [self.remoteVideoView renderFrame:nil];
     }
-    [self.navigationController popViewControllerAnimated:YES];
-    [MTRTCHelper showAlertWithTitle:@"OOPS!!" andMessage:@"Connection disconnected. Please try with another room id" inController:[UIApplication sharedApplication].keyWindow.rootViewController];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [MTRTCHelper showAlertWithTitle:@"OOPS!!" andMessage:@"Connection disconnected. Please try with another room id" inController:self];
 }
 
 

@@ -30,9 +30,10 @@
 @property (strong, nonatomic) IBOutlet UIButton *endButton;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityLoadingIndicator;
 
-@property (strong, nonatomic) NSString *roomName;
+@property (strong, ) NSString *roomName;
 @property (nonatomic, assign) BOOL isAudioOn;
 @property (nonatomic, assign) BOOL isVideoOn;
+@property (nonatomic, strong) NSDictionary *callDetails;
 
 @property (nonatomic, weak) id<MTRTCCallViewControllerDelegate> delegate;
 @property (nonatomic, strong) MTRTCClient *client;

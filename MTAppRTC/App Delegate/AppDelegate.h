@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+@import Firebase;
+@class  MTCallManager;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) FIRDatabaseReference *refernce;
+
+- (void)showUsersListView;
+- (void)showLoginView;
+- (void)logout;
 
 @end
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "38ECD5CFD160B8CF64864401C861CAA5"
+               BlueprintIdentifier = "46E403562BFC22F6AE7BA7A75066851F"
                BuildableName = "Pods_MTAppRTC.framework"
                BlueprintName = "Pods-MTAppRTC"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "38ECD5CFD160B8CF64864401C861CAA5"
+            BlueprintIdentifier = "46E403562BFC22F6AE7BA7A75066851F"
             BuildableName = "Pods_MTAppRTC.framework"
             BlueprintName = "Pods-MTAppRTC"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "38ECD5CFD160B8CF64864401C861CAA5"
-            BuildableName = "Pods_MTAppRTC.framework"
-            BlueprintName = "Pods-MTAppRTC"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

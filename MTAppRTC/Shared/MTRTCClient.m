@@ -145,6 +145,7 @@ static NSString *kDefaultMediaConstraintKey = @"DtlsSrtpKeyAgreement";
             [self.channel sendData:byeData];
         }
         // Disconnect from collider.
+        [self.channel disconnect];
         self.channel = nil;
     }
     self.clientId = nil;

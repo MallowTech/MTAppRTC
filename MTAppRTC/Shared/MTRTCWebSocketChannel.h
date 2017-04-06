@@ -42,5 +42,6 @@ typedef NS_ENUM(NSInteger, MTRTCWebSocketChannelState) {
 - (instancetype)initWithURL:(NSURL *)url restURL:(NSURL *)restURL delegate:(id<MTRTCWebSocketChannelDelegate>)delegate;
 - (void)registerForRoomId:(NSString *)roomId clientId:(NSString *)clientId;
 - (void)sendData:(NSData *)data;
+- (void)disconnect;
 
 @end
