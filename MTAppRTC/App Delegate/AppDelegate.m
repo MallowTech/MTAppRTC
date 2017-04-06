@@ -147,6 +147,7 @@
 
 // Dismiss the Incoming call view
 - (void)dismissIncomingCallView {
+    self.callManager.currentCall = nil;
     [self.incomingCallViewController dismissViewControllerAnimated:NO completion:nil];
     self.incomingCallViewController.delegate = nil;
     self.incomingCallViewController = nil;
@@ -161,6 +162,7 @@
 
 - (void)callRejected:(NSDictionary *)call {
     [self.timer invalidate];
+    [self.callNavigationViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)startCall:(NSDictionary *)call {
@@ -177,13 +179,20 @@
     self.timer = [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(dismissIncomingCallView) userInfo:call repeats:false];
 }
 
+- (void)cancelCall {
+    [self.timer invalidate];
+    [self dismissIncomingCallView];
+}
+
+
 #pragma mark - CallManager Delegate Methods
 
 - (void)acceptedCall:(NSDictionary *)call {
     //User accepted the call
     [self.callManager acceptCall];
     //Dismiss the incoming call view
-    [self dismissIncomingCallView];
+    [self.incomingCallViewController dismissViewControllerAnimated:NO completion:nil];
+    self.incomingCallViewController.delegate = nil;
     //Show video chat view
     [self showCallerView:call];
 }
@@ -192,7 +201,8 @@
     //User rejected the call
     [self.callManager rejectCall];
     //Dismiss the incoming call view
-    [self dismissIncomingCallView];
+    [self.incomingCallViewController dismissViewControllerAnimated:NO completion:nil];
+    self.incomingCallViewController.delegate = nil;
 }
 
 -(void)permissionForAudioAndVideo {

@@ -10,10 +10,12 @@
 #import "AppDelegate.h"
 
 @protocol MTCallManagerDelegate <NSObject>
+
 - (void)callAccepted:(NSDictionary *)call;
 - (void)callRejected:(NSDictionary *)call;
 - (void)incomingCall:(NSDictionary *)call;
 - (void)startCall:(NSDictionary *)call;
+- (void)cancelCall;
 
 @end
 
@@ -30,6 +32,7 @@
 - (void)acceptCall;
 - (void)rejectCall;
 - (void)missedACall;
+- (void)cancelACall:(NSDictionary *)call;
 - (void)reset;
 
 @end

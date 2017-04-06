@@ -18,6 +18,7 @@
 #import <AVFoundation/AVMediaFormat.h>
 #import <AVFoundation/AVCaptureDevice.h>
 #import "MTRTCHelper.h"
+#import "MTCallManager.h"
 
 #define kServerURL @"https://appr.tc"
 
@@ -114,6 +115,7 @@
 
 - (IBAction)endButtonPressed:(id)sender {
     [self disconnect];
+    [[MTCallManager sharedManager] cancelACall:self.callDetails];
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -208,7 +208,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonPressed:" destination="cQV-L0-eoI" eventType="touchUpInside" id="Xx6-fp-y9B"/>
                                     <segue destination="SXP-9f-lDO" kind="show" id="2wY-Xf-sN9">
                                         <nil key="action"/>
                                     </segue>
@@ -296,7 +295,6 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="loginButtonPressed:" destination="cQV-L0-eoI" eventType="touchUpInside" id="ZFV-6z-Ke8"/>
                                             <action selector="registerButtonPressed:" destination="SXP-9f-lDO" eventType="touchUpInside" id="Iwx-QF-u2S"/>
                                         </connections>
                                     </button>

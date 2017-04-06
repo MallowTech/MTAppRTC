@@ -55,10 +55,10 @@ static MTCallManager *sharedManager;
                 if ([self.delegate respondsToSelector:@selector(startCall:)]) {
                     [self.delegate startCall:self.currentCall];
                 }
-                
-                //Listen observer for current call status
-                [self subscribeToCurrentCall:snapshot.key];
             }
+            
+            //Listen observer for current call status
+            [self subscribeToCurrentCall:snapshot.key];
         }
     }];
     
@@ -111,6 +111,15 @@ static MTCallManager *sharedManager;
     }
 }
 
+- (void)cancelACall:(NSDictionary *)call {
+    NSString *key = call.allKeys.firstObject;
+    NSDictionary *dictionary = [call objectForKey:key];
+    [dictionary setValue:@"Cancelled" forKey:@"status"];
+    [[[self.appdelegate.refernce child:@"chat"] child:key] setValue:dictionary withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+        self.currentCall = nil;
+    }];
+}
+
 //Listen for current status of the call
 - (void)subscribeToCurrentCall:(NSString *)child {
     FIRDatabaseHandle handle = [[[self.appdelegate.refernce child:@"chat"] child:child] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
@@ -129,6 +138,14 @@ static MTCallManager *sharedManager;
                 } else if ([status isEqualToString:@"Rejected"]) {
                     if ([self.delegate respondsToSelector:@selector(callRejected:)]) {
                         [self.delegate callRejected:self.currentCall];
+                    }
+                    [self.appdelegate.refernce removeObserverWithHandle:handle];
+                    self.currentCall = nil;
+                }
+            } else {
+                if ([status isEqualToString:@"Cancelled"]) {
+                    if ([self.delegate respondsToSelector:@selector(cancelCall)]) {
+                        [self.delegate cancelCall];
                     }
                     [self.appdelegate.refernce removeObserverWithHandle:handle];
                     self.currentCall = nil;
